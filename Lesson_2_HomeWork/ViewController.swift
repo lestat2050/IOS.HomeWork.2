@@ -10,18 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let myCar = Car()
+    let someCar = Car()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myCar.enableEngine()
-        myCar.disableEngine()
-        myCar.sayBeepBeep()
-        myCar.openTrunk()
-        myCar.putToTrunk(name: "Apple")
-        myCar.removeFromTrunk(name: "Apple")
-        myCar.closeTrunk()
+        someCar.enableEngine()
+        someCar.disableEngine()
+        someCar.printSignal()
+        someCar.openTrunk()
+        someCar.putToTrunk(name: "Apple")
+        someCar.removeFromTrunk(name: "Apple")
+        someCar.closeTrunk()
     }
 
 }

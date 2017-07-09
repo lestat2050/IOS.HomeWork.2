@@ -9,22 +9,22 @@
 import Foundation
 
 class Car {
-    var engine: statusEngine
-    var trunk: statusTrunk
+    var engine: StatusEngine
+    var trunk: StatusTrunk
     var contentTrunk = [String: String]()
     
-    init(engine: statusEngine = .disable, trunk: statusTrunk = .close, contentTrunk: [String: String] = [:]) {
+    init(engine: StatusEngine = .disable, trunk: StatusTrunk = .close, contentTrunk: [String: String] = [:]) {
         self.engine = engine
         self.trunk = trunk
         self.contentTrunk = contentTrunk
     }
     
-    enum statusEngine {
+    enum StatusEngine {
         case enable
         case disable
     }
     
-    enum statusTrunk {
+    enum StatusTrunk {
         case open
         case close
     }
@@ -45,7 +45,7 @@ class Car {
         engine = .disable
     }
     
-    func sayBeepBeep() {
+    func printSignal() {
         print("Beep-Beep!")
     }
     
