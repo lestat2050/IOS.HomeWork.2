@@ -9,54 +9,36 @@
 import Foundation
 
 class Car {
-    var engine: StatusEngine
-    var trunk: StatusTrunk
+    var engineStatus: Bool
+    var trunkStatus: Bool
     var contentTrunk = [String: String]()
     
-    init(engine: StatusEngine = .disable, trunk: StatusTrunk = .close, contentTrunk: [String: String] = [:]) {
-        self.engine = engine
-        self.trunk = trunk
+    init(engineStatus: Bool = false, trunkStatus: Bool = false, contentTrunk: [String: String] = [:]) {
+        self.engineStatus = engineStatus
+        self.trunkStatus = trunkStatus
         self.contentTrunk = contentTrunk
     }
     
-    enum StatusEngine {
-        case enable
-        case disable
+    func switchEngineStatus() {
+        engineStatus = !engineStatus
     }
     
-    enum StatusTrunk {
-        case open
-        case close
+    func switchTrunkStatus() {
+        trunkStatus = !trunkStatus
     }
     
-    func openTrunk() {
-        trunk = .open
-    }
-    
-    func closeTrunk() {
-        trunk = .close
-    }
-    
-    func enableEngine() {
-        engine = .enable
-    }
-    
-    func disableEngine() {
-        engine = .disable
-    }
-    
-    func printSignal() {
+    func beep() {
         print("Beep-Beep!")
     }
     
     func putToTrunk(name: String) {
-        if trunk == .open {
+        if trunkStatus {
             contentTrunk[name] = name
         }
     }
     
     func removeFromTrunk(name: String) {
-        if trunk == .open {
+        if trunkStatus {
             contentTrunk.removeValue(forKey: name)
         }
     }
