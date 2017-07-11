@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         someCar.disableEngine()
         someCar.makeSignal()
         someCar.openTrunk()
-        someCar.putToTrunk(key: "Apple", name: "Apple")
-        someCar.removeFromTrunk(key: "Apple")
+        someCar.putInTrunk(key: "Apple", name: "Apple")
+        someCar.takeFromTrunk(key: "Apple")
         someCar.closeTrunk()
     }
 

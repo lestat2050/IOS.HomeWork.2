@@ -39,13 +39,13 @@ class Car {
         print("Beep-Beep!")
     }
     
-    func putToTrunk(key: String, name: String) {
+    func putInTrunk(key: String, name: String) {
         if trunkIsOpen {
             contentTrunk[key] = name
         }
     }
     
-    func removeFromTrunk(key: String) {
+    func takeFromTrunk(key: String) {
         if trunkIsOpen {
             contentTrunk.removeValue(forKey: key)
         }
