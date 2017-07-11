@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        someCar.switchEngineStatus()
-        someCar.switchEngineStatus()
-        someCar.beep()
-        someCar.switchTrunkStatus()
-        someCar.putToTrunk(name: "Apple")
-        someCar.removeFromTrunk(name: "Apple")
-        someCar.switchTrunkStatus()
+        someCar.enableEngine()
+        someCar.disableEngine()
+        someCar.makeSignal()
+        someCar.openTrunk()
+        someCar.putToTrunk(key: "Apple", name: "Apple")
+        someCar.removeFromTrunk(key: "Apple")
+        someCar.closeTrunk()
     }
 
 }
