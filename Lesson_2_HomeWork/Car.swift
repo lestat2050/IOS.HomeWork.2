@@ -10,40 +10,46 @@ import Foundation
 
 class Car {
     
-    var engineIsEnable: Bool
-    var trunkIsOpen: Bool
-    var contentTrunk: [String: String] = [:]
+    private var isEngineEnable: Bool
+    private var isTrunkOpen: Bool
+    private var trunk: [String: String]
     
-    init(engineIsEnable: Bool = false,
-         trunkIsOpen: Bool = false,
-         contentTrunk: [String: String] = [:]) {
-        self.engineIsEnable = engineIsEnable
-        self.trunkIsOpen = trunkIsOpen
-        self.contentTrunk = contentTrunk
+    init(isEngineEnable: Bool = false,
+         isTrunkOpen: Bool = false,
+         trunk: [String: String] = [:]) {
+        self.isEngineEnable = isEngineEnable
+        self.isTrunkOpen = isTrunkOpen
+        self.trunk = trunk
     }
     
     func switchEngineState() {
-        engineIsEnable = !engineIsEnable
+        isEngineEnable = !isEngineEnable
     }
     
     func switchTrunkState() {
-        trunkIsOpen = !trunkIsOpen
+        isTrunkOpen = !isTrunkOpen
     }
     
     func reproduceSignal() {
         print("Beep-Beep!")
     }
     
-    func putInTrunk(key: String, name: String) {
-        if trunkIsOpen {
-            contentTrunk[key] = name
+    func addToTrunk(item: String) {
+        if isTrunkOpen {
+            trunk[item] = item
         }
     }
     
-    func takeFromTrunk(key: String) {
-        if trunkIsOpen {
-            contentTrunk.removeValue(forKey: key)
+    func getFromTrunk(item: String) -> String {
+        var baggage: String?
+        
+        if isTrunkOpen {
+            baggage = trunk.removeValue(forKey: item)
+            if let baggage = baggage {
+                return baggage
+            }
         }
+        return "nothing"
     }
     
 }

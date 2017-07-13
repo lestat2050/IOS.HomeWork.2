@@ -10,18 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let someCar = Car()
+    let bmw = Car()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        someCar.switchEngineState()
-        someCar.switchEngineState()
-        someCar.reproduceSignal()
-        someCar.switchTrunkState()
-        someCar.putInTrunk(key: "Apple", name: "Apple")
-        someCar.takeFromTrunk(key: "Apple")
-        someCar.switchTrunkState()
+        bmw.switchEngineState()
+        bmw.switchEngineState()
+        bmw.reproduceSignal()
+        bmw.switchTrunkState()
+        bmw.addToTrunk(item: "Apple")
+        let baggage = bmw.getFromTrunk(item: "Apple")
+        print("I take \(baggage)")
+        bmw.switchTrunkState()
     }
 
 }
