@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         bmw.switchEngineState()
         bmw.reproduceSignal()
         bmw.switchTrunkState()
-        bmw.addToTrunk(item: "Apple")
-        let baggage = bmw.getFromTrunk(item: "Apple")
+        bmw.addToTrunk("Apple")
+        let baggage = bmw.selectFromTrunk("Apple")
         print("I take \(baggage)")
         bmw.switchTrunkState()
     }

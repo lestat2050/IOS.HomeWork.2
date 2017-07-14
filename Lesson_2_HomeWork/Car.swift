@@ -34,13 +34,13 @@ class Car {
         print("Beep-Beep!")
     }
     
-    func addToTrunk(item: String) {
+    func addToTrunk(_ item: String) {
         if isTrunkOpen {
             trunk[item] = item
         }
     }
     
-    func getFromTrunk(item: String) -> String {
+    func selectFromTrunk(_ item: String) -> String {
         var baggage: String?
         
         if isTrunkOpen {
