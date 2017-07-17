@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					D136A41D1F08B16000AFA9BE = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 39Z4HLUZUT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -264,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 39Z4HLUZUT;
 				INFOPLIST_FILE = Lesson_2_HomeWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Test.Lesson-2-HomeWork";
@@ -276,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 39Z4HLUZUT;
 				INFOPLIST_FILE = Lesson_2_HomeWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Test.Lesson-2-HomeWork";
